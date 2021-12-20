@@ -1,4 +1,5 @@
 <script context='module' lang='ts'>
+  import type { PokeDetailType } from '../../types';
   export async function load({page}) {
     const id = page.params.id;
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
@@ -11,7 +12,7 @@
 </script>
 
 <script lang='ts'>
-  export let mon;
+  export let mon: PokeDetailType;
 </script>
 
 <div class='flex flex-col items-center'>
